@@ -2,7 +2,7 @@
 
 #define parameters which are passed in.
 NAME=$1; shift
-NAMESPACE=""; shift
+NAMESPACE="blue-test"; shift
 DOMAINLIST=$@
 
 
