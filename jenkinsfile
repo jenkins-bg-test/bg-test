@@ -31,7 +31,7 @@ stages {
     //Execute migrate-backup.sh
     
     sh ('sh ./migrate-backup.sh validation-flow.zip')
-    sleep 20
+    sleep 5
     }
   }
   
