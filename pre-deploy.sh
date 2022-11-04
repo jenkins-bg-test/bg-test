@@ -8,7 +8,7 @@
 #create new project
   #  oc project sce-test
 ### Create namespace
-    namespace="bg-test"
+    namespace="blue-test"
     if [ -z "${namespace}" ]; then
         echo "ERROR: missing namespace argument, make sure to pass namespace, ex: '-n mynamespace'"
         exit 1;
