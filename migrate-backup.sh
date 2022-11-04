@@ -4,7 +4,7 @@
 # Globals #
 ###########
 
-NAMESPACE=""
+NAMESPACE="blue-test"
 declare -a PORTARR=("https-9090" "http-8001")
 
 BACKUP_ZIP=""
