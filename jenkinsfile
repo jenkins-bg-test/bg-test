@@ -17,7 +17,7 @@ stages {
   stage('Pre-deploy requirements') {
     steps {
     sh "chmod +x -R ${env.WORKSPACE}"
-    sh "oc login --token=${OC_LOGIN} --server=https://c103-e.eu-de.containers.cloud.ibm.com:30360"
+    sh "oc login --token=${OC_LOGIN} --server=https://c106-e.us-south.containers.cloud.ibm.com:30938"
     sh 'oc status'
     sh ('sh ./pre-deploy.sh $IBM_ENTITLEMENT_KEY')
     sh ('rm -rf ./validation-flow')
@@ -38,9 +38,9 @@ stages {
   stage('Deploying YAML Files') {
     steps {
     //apply default yaml files
-    sh 'oc apply -f ./validation-flow/validation-flow-output/default-cfg.yaml -n sce-test2'
+    sh 'oc apply -f ./validation-flow/validation-flow-output/default-cfg.yaml -n bg-test'
     sleep 5
-    sh 'oc apply -f ./validation-flow/validation-flow-output/default-local.yaml -n sce-test2'
+    sh 'oc apply -f ./validation-flow/validation-flow-output/default-local.yaml -n bg-test'
     sleep 5
     
     //Apply DataPower Service
