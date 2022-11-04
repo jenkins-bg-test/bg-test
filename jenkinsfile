@@ -22,7 +22,7 @@ stages {
     sh ('sh ./pre-deploy.sh $IBM_ENTITLEMENT_KEY')
     sh ('rm -rf ./validation-flow')
     //sh ('rm -rf ./datapower')
-    sleep 20
+    sleep 5
     }
   }
   
@@ -38,9 +38,9 @@ stages {
   stage('Deploying YAML Files') {
     steps {
     //apply default yaml files
-    sh 'oc apply -f ./validation-flow/validation-flow-output/default-cfg.yaml -n bg-test'
+    sh 'oc apply -f ./validation-flow/validation-flow-output/default-cfg.yaml -n ""'
     sleep 5
-    sh 'oc apply -f ./validation-flow/validation-flow-output/default-local.yaml -n bg-test'
+    sh 'oc apply -f ./validation-flow/validation-flow-output/default-local.yaml -n ""'
     sleep 5
     
     //Apply DataPower Service
