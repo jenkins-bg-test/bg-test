@@ -38,9 +38,9 @@ stages {
   stage('Deploying YAML Files') {
     steps {
     //apply default yaml files
-    sh 'oc apply -f ./validation-flow/validation-flow-output/default-cfg.yaml -n ""'
+    sh 'oc apply -f ./validation-flow/validation-flow-output/default-cfg.yaml -n blue-test'
     sleep 5
-    sh 'oc apply -f ./validation-flow/validation-flow-output/default-local.yaml -n ""'
+    sh 'oc apply -f ./validation-flow/validation-flow-output/default-local.yaml -n blue-test'
     sleep 5
     
     //Apply DataPower Service
